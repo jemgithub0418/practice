@@ -1,10 +1,43 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 
 {% block title %}Register{% endblock %}
 
 {% block content %} 
-	<h6>register here</h6>
+  <div class="container d-fixed h-100 align-items-center">
+    <div class="mx-auto">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-sm-5 " style='margin-top:7rem'>
+                <form method="POST">
+                    {%csrf_token%}
+                    <fieldset class='form-group'>
+                        <legend class= 'border-bottom mb-4' style="text-align: center">Registration</legend>
+                        {{form|crispy}}
 
-	{{form}}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type='submit'>Login</button>
+                    </div>
+                    <div>
+                        <small><a href="#">Forgot your password?</a></small>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+  </div>
+  <br><br><br><br><br>
+
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Email address</label>
+</div>
+<div class="form-floating">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+  <label for="floatingPassword">Password</label>
+</div>
 {% endblock %}
