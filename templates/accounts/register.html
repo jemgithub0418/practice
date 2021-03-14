@@ -5,10 +5,4 @@
 
 {% block content %} 
 	<h6>register here</h6>
-	<form method="POST" novalidate>
-		{% csrf_token %}
-		<!-- <input type="hidden" name="next" value="{{ next }}"> -->
-		{{form}}
-	</form>
-
 {% endblock %}
