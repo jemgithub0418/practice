@@ -13,7 +13,6 @@
   <body>
 
     <div class="container">
-      {% block nav %}
       <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -38,8 +37,6 @@
           </div>
         </div>
       </nav>
-
-      {% endblock %}
       {% if messages %}
       {% for message in messages %}
       {% if message.tags == 'success' %}
