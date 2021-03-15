@@ -3,7 +3,9 @@
 
 {% block title %}Register{% endblock %}
 
-{% block content %} 
+{% block nav %} <hr>{% endblock %}
+
+{% block content %}
   <div class="container d-fixed h-100 align-items-center">
     <div class="mx-auto">
         <div class="row">
@@ -12,13 +14,17 @@
             <div class="col-sm-5 " style='margin-top:7rem'>
                 <form method="POST">
                     {%csrf_token%}
+                    <p><small class="text-muted">insert cvs logo here</small></p>
                     <fieldset class='form-group'>
-                        <legend class= 'border-bottom mb-4' style="text-align: center">Registration</legend>
+                        <legend class= 'border-bottom mb-4' style="text-align: center">Be a Conqueror!</legend>
+                        <small class="text-muted">Just a sample legend, not really related to Blog but to CVS Website.</small>
+                        <br><br>
                         {{form|crispy}}
-
                     </fieldset>
+
+                    <br>
                     <div class="form-group">
-                        <button class="btn btn-outline-info" type='submit'>Login</button>
+                        <button class="btn btn-primary" type='submit'>Join Now!</button>
                     </div>
                     <div>
                         <small><a href="#">Forgot your password?</a></small>

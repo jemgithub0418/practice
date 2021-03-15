@@ -11,8 +11,8 @@ class UserAdmin(UserAdmin):
 	form = accounts.UserChangeForm
 	# REQUIRED_FIELDS = ['first_name', 'last_name']
 	fieldsets = (
-	        ('Login Credentials', {'fields': ('email','username', 'password',)}),
-	        ('Personal Information', { 'fields': ('first_name', 'last_name', )}),
+			('Login Credentials', {'fields': ('email','username', 'password',)}),
+			('Personal Information', { 'fields': ('first_name', 'last_name', )}),
 		)
 	add_fieldsets = (
 	        ('Login Credentials', {'fields': ('email','username', 'password',)}),

@@ -7,7 +7,7 @@ class EmailRequiredMixin(object):
         super(EmailRequiredMixin, self).__init__(*args, **kwargs)
         # make user email field required
         self.fields['email'].required = True
-        self.fields['username'].help_text = "Read only."		
+        self.fields['username'].help_text = "Read only."
 
 
 class UsernameDisableMixin(object):
@@ -26,8 +26,9 @@ class UserCreationForm(UserCreationForm):
 
 	class Meta:
 		model = User
+		# tinanggal ko ung password 1 and 2 kasi nagdodoble ng textbox sa frontend
 		fields = [
-			'email', 'first_name', 'last_name', 'username','password', 'password2',
+			 'first_name', 'last_name', 'email','username',
 		]
 
 
