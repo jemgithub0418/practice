@@ -4,7 +4,7 @@ from django.contrib import messages
 
 
 def register(request):
-    if request.method == "POST":
+    if registerequest.method == "POST":
         form = accounts.UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
