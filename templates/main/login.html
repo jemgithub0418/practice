@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <!-- Header -->
+<header class="masthead" style="#">
+  <div class="container d-fixed h-100 align-items-center">
+    <div class="mx-auto text-center">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-sm-5 align-self-center" style='margin-top:7rem'>
+                <form method="POST">
+                    {%csrf_token%}
+                    <fieldset class='form-group'>
+                        <legend class= 'border-bottom mb-4'>Log In</legend>
+                        {{form|crispy}}
+
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type='submit'>Login</button>
+                    </div>
+                    <div>
+                        <small class="text-muted">Don't have an account? <a href="{% url 'accounts:register' %}">Join Now!</a> </small>
+                    </div>
+                    <div>
+                        <small><a href="#">Forgot your password?</a></small>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+</div>
+{% endblock %}

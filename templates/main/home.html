@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    Home
+{% endblock %}
+
 {% block content %}
-    <h6>home</h6>
+    <h6>Welcome, {{request.user}}</h6>
 {% endblock %}
